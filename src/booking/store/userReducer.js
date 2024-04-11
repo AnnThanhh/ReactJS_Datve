@@ -1,32 +1,8 @@
 import * as ActionType from "./constants";
+import data from "./data.json"
 
 const initialState = {
-  listUsers: [
-    {
-      id: 1,
-      fullname: "Dinh Phuc Nguyen",
-      username: "dpnguyen",
-      email: "dpnguyen@gmail.com",
-      phoneNumber: "123456789",
-      type: "VIP",
-    },
-    {
-      id: 2,
-      fullname: "Nguyen Van A",
-      username: "vana",
-      email: "vana@gmail.com",
-      phoneNumber: "123456789",
-      type: "USER",
-    },
-    {
-      id: 3,
-      fullname: "Nguyen Van B",
-      username: "vanb",
-      email: "vana@gmail.com",
-      phoneNumber: "123456789",
-      type: "USER",
-    },
-  ],
+  listUsers: data,
   keyword: "",
   editUser: null,
 };

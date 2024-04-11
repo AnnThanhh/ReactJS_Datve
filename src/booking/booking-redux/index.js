@@ -9,7 +9,7 @@ class Home extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="display-4 text-center my-3">User Management</h1>
+        <h1 className="display-4 text-center my-3">Đặt Vé Xem Phim</h1>
         <div className="d-flex justify-content-between align-items-center">
           <Search />
           <button
