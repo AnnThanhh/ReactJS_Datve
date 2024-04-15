@@ -1,41 +1,16 @@
 import React, { Component } from "react";
-import Search from "./Search";
-import Users from "./Users";
-import Modal from "./Modal";
-import { connect } from "react-redux";
-import { actEditUser } from "./../store/actions";
+import SeatSelection from "./seatSelection";
+import Payment from "./payment";
 
-class Home extends Component {
+export default class Home extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="display-4 text-center my-3">Đặt Vé Xem Phim</h1>
-        <div className="d-flex justify-content-between align-items-center">
-          <Search />
-          <button
-            className="btn btn-success"
-            data-toggle="modal"
-            data-target="#modelIdUser"
-            onClick={() => {
-              this.props.resetUserEdit();
-            }}
-          >
-            Add User
-          </button>
-        </div>
-        <Users />
-        <Modal />
+         <div className="App">
+        <SeatSelection />
+        <Payment />
+      </div>
       </div>
     );
   }
 }
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    resetUserEdit: () => {
-      dispatch(actEditUser(null));
-    },
-  };
-};
-
-export default connect(null, mapDispatchToProps)(Home);
